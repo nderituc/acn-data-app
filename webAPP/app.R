@@ -10,7 +10,9 @@ ui <- dashboardPage(
       menuItem("Introduction", tabName = "intro_tab"),
       menuItem("Data Insights", tabName = "data_tab"),
       menuItem("PDF Files", tabName = "pdf_tab")
-    )
+    ),
+    # Query input
+    textInput("user_query", "Type your query here:")
   ),
   dashboardBody(
     tabItems(
@@ -18,7 +20,7 @@ ui <- dashboardPage(
       tabItem(
         tabName = "intro_tab",
         h2("Introduction to African Collaborative Network"),
-        p("Welcome to ACN! This is the introduction tab where you can find information about ACN and other details."),
+        p("Welcome to our African Collaborative Network! This is the introduction tab where you can find information about African Immigrants in USA  and other details."),
         # Add any other UI elements for introduction here
       ),
       # Data Insights tab
@@ -33,7 +35,7 @@ ui <- dashboardPage(
       tabItem(
         tabName = "pdf_tab",
         h2("PDF Files"),
-        p("Here, you can access and view the PDF files relevant to organization."),
+        p("Here, you can access and view the PDF files relevant to the course."),
         # Add any UI elements related to PDF files here
       )
     )
